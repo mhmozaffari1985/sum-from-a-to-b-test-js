@@ -1,6 +1,10 @@
-
 function sum(fromN, toN) {
-  // Sum all the values from fromN up to toN
+  if (toN === fromN) {
+    return fromN;
+  }
+
+  return toN + sum(fromN, toN - 1);
 }
 
+//console.log(sum(5, 12));
 module.exports = sum;
